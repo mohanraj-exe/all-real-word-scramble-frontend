@@ -1,0 +1,13 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+} */
+
+.scramble-main{
+  padding: 1em;
+  border: 0.45em solid #FAFA33;
+  background-color: #4169E1;
+  text-align: center;
+}
