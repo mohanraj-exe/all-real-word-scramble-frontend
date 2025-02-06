@@ -23,7 +23,8 @@ function App() {
   useEffect(() => {
     const fetchWords = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/fetch", {
+        // const response = await fetch("http://localhost:3000/api/fetch", {
+        const response = await fetch("https://all-real-scramble-backend.onrender.com/api/fetch", {
           method: 'GET',
           headers: {
             "Content-type": "application/json"
@@ -89,7 +90,8 @@ function App() {
     }
 
     try {
-      const response = await fetch("http://localhost:3000/api/verify", {
+      // const response = await fetch("http://localhost:3000/api/verify", {
+      const response = await fetch("https://all-real-scramble-backend.onrender.com/api/verify", {
         method: 'POST',
         headers: {
           "Content-type": "application/json"
