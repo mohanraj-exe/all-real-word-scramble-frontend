@@ -110,7 +110,7 @@ function App() {
       }
 
       const { data } = await response.json();
-      console.log("Response from backend:", data);
+      // console.log("Response from backend:", data);
       const random_number = random_number_helper(word.array.length);
       const random_word = word.array[random_number];
 
