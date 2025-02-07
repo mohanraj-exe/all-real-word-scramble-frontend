@@ -189,7 +189,8 @@ function App() {
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-evenly' }}>
           <button type="button" onClick={handleRefresh}>Refresh</button>
           <p>Score: <span style={{ fontWeight: 'bold' }}>{word.score}</span></p>
-          <button type="submit" onClick={handleSubmit}>Submit</button>
+          <button type="submit" onClick={handleSubmit}
+            disabled={word.unscramble.trim().length === 0}>Submit</button>
         </div>
       </main>
     </>
