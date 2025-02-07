@@ -126,7 +126,8 @@ function App() {
         time: 0
       }));
 
-      alert(` 
+      alert(`
+        Congrats your answer is correct!
         Your score: ${data.score}
         Time taken: ${data.timeTakenInSeconds}
         Correct answer: ${data.answer}`)
