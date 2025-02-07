@@ -90,14 +90,13 @@ function App() {
     }
 
     try {
-      // const response = await fetch("http://localhost:3000/api/verify", {
-      const response = await fetch("https://all-real-scramble-backend.onrender.com/api/verify", {
+      // const response = await fetch(`http://localhost:3000/api/verify/${word._id}`, {
+      const response = await fetch(`https://all-real-scramble-backend.onrender.com/api/verify/${word._id}`, {
         method: 'POST',
         headers: {
           "Content-type": "application/json"
         },
         body: JSON.stringify({
-          selected_id: word._id,
           typedAnswer: word.unscramble,
           score: word.score,
           completionTime: word.time
@@ -129,7 +128,7 @@ function App() {
 
       alert(` 
         Your score: ${data.score}
-        Time taken: ${data.time}
+        Time taken: ${data.timeTakenInSeconds}
         Correct answer: ${data.answer}`)
       return;
 
