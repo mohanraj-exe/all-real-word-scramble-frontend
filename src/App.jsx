@@ -11,7 +11,8 @@ function App() {
     score: 100,
     time: 0,
     array: '',
-    isGameActive: false
+    isGameActive: false,
+    isButtonDisabled: true
   });
 
   const unscrambledFn = (e) => {
@@ -62,7 +63,8 @@ function App() {
       level: random_word.level,
       score: 100,
       isGameActive: true,
-      time: 0
+      time: 0,
+      isButtonDisabled: false
     }));
   };
 
@@ -123,7 +125,8 @@ function App() {
         level: random_word.level,
         score: 100,
         isGameActive: true,
-        time: 0
+        time: 0,
+        isButtonDisabled: false
       }));
 
       alert(`
@@ -190,7 +193,7 @@ function App() {
           <button type="button" onClick={handleRefresh}>Refresh</button>
           <p>Score: <span style={{ fontWeight: 'bold' }}>{word.score}</span></p>
           <button type="submit" onClick={handleSubmit}
-            disabled={word.unscramble.trim().length === 0}>Submit</button>
+            disabled={word.isButtonDisabled}>Submit</button>
         </div>
       </main>
     </>
